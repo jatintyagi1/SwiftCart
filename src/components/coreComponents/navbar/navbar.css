@@ -1,0 +1,158 @@
+/* full Navbar Wrapper */
+.navbar-full-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Upper Navbar Css */
+
+.navbar-upper-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+
+.navbar-upper-left-wrapper {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar-company-name-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: yellow; */
+    width: 28%;
+    height: 75px;
+}
+
+.navbar-company-name{
+   font-size: 3em;
+   font-style: italic;
+   color: #0000ff;
+}
+
+.navbar-search-item-container{
+     width: 72%;
+     height: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     /* background-color: #0000ff; */
+}
+
+.navbar-search-input-container{
+    width: 90%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f5ff;
+    border-radius: 10px;
+}
+
+.navbar-search-icon{
+  width: 7%;
+  height: 60%;  
+  cursor: pointer;
+}
+
+.navbar-search-input{
+    width: 90%;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #f0f5ff;
+}
+
+.navbar-search-input:focus{
+   border: none;
+   outline: none;
+}
+
+
+/* Right side Navbar  */
+
+.navbar-upper-right-wrapper { 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 40%;
+
+}
+
+.navbar-user-login-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 70%;
+    width: 20%;
+    cursor: pointer;
+    margin-left: -55px;
+}
+
+.navbar-user-icon,
+.navbar-cart-icon,
+.navbar-seller-store-icon,
+.navbar-three-dot{
+    padding: 5px;
+    height: 25px;
+}
+
+.navbar-user-login-text,
+.navbar-cart-text,
+.navbar-seller-text{
+    font-size: 20px;
+}
+
+.navbar-user-login-arrow{
+    transition: transform 0.3s;
+}
+.navbar-user-login-container:hover .navbar-user-login-arrow{
+    transform: rotate(180deg);
+}
+.navbar-user-login-container:hover{
+    background-color: #0000ff;
+    border-radius: 8px;
+    color: #ffffff;
+}
+
+.navbar-cart-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 70%;
+    width: 12%;
+    cursor: pointer;
+}
+
+
+
+.navbar-seller-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 10px;
+  height: 70%;
+}
+
+.navbar-three-dot-container{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ padding: 10px;
+ cursor: pointer;
+ margin-left: -25px;
+ height: 30%;
+ width: 30px;
+}
+
