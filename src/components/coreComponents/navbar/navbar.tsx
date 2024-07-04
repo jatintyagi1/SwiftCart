@@ -1,7 +1,6 @@
 import './navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShoppingCart, faSearch, faUser, faStore, faEllipsisV } from '@fortawesome/free-solid-svg-icons';
-// import { Link } from 'react-router-dom';
+import { faShoppingCart, faDownload, faChartLine, faBell, faHeadphones, faSearch, faUser, faStore, faEllipsisV, faUserCircle, faStar, faBoxOpen, faHeart, faGift, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
     return (
@@ -28,6 +27,27 @@ const Navbar = () => {
                         <FontAwesomeIcon className='navbar-user-icon' icon={faUser} />
                         <p className='navbar-user-login-text'>Login</p>
                         <span className="navbar-user-login-arrow">&#9660;</span>
+                        <div className="navbar-user-login-dropdown">
+                            <div className="navbar-user-login-dropdown-upper-container">
+                               <div className='navar-new-customer-container'>
+                               <p className='navbar-dropdown-new-customer-text'>New Customer?</p>
+                               </div>
+                               <div className='navbar-dropdown-signup-container'>
+                               <p className='navbar-dropdown-signup-text'>Sign Up</p>
+                               </div>
+                            </div>
+                            <div className="navbar-user-login-dropdown-lower-container">
+                                <ul className="navbar-user-dropdown-list">
+                                    <li><FontAwesomeIcon className='navbar-login-dropdown-icon' icon={faUserCircle} /> My Profile</li>
+                                    <li><FontAwesomeIcon className='navbar-login-dropdown-icon' icon={faStar} /> Swiftcart Plus Member</li>
+                                    <li><FontAwesomeIcon className='navbar-login-dropdown-icon' icon={faBoxOpen} /> Orders</li>
+                                    <li><FontAwesomeIcon className='navbar-login-dropdown-icon' icon={faHeart} /> Wishlist</li>
+                                    <li><FontAwesomeIcon className='navbar-login-dropdown-icon' icon={faGift} /> Rewards</li>
+                                    <li><FontAwesomeIcon className='navbar-login-dropdown-icon' icon={faEnvelope} /> Gift Cards</li>
+                                </ul>
+                            </div>
+                        </div>
+
                     </div>
 
                     <div className='navbar-cart-container'>
@@ -37,13 +57,20 @@ const Navbar = () => {
 
                     <div className='navbar-seller-container'>
                         <FontAwesomeIcon className='navbar-seller-store-icon' icon={faStore} />
-                        <p className='navbar-seller-text'>Became a Seller</p>
+                        <p className='navbar-seller-text'>Become a Seller</p>
                     </div>
 
                     <div className='navbar-three-dot-container'>
                         <FontAwesomeIcon className='navbar-three-dot' icon={faEllipsisV} />
+                        <div className='navbar-three-dot-dropdown'>
+                            <ul className='navbar-three-dot-dropdown-list'>
+                                <li><FontAwesomeIcon icon={faBell} /> Notification Preference</li>
+                                <li><FontAwesomeIcon icon={faHeadphones} /> 24x7 Customer Care</li>
+                                <li><FontAwesomeIcon icon={faChartLine} /> Advertise</li>
+                                <li><FontAwesomeIcon icon={faDownload} /> Download App</li>
+                            </ul>
+                        </div>
                     </div>
-
                 </div>
             </div>
         </div>
