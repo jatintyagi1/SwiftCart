@@ -1,16 +1,17 @@
 import './navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart, faDownload, faChartLine, faBell, faHeadphones, faSearch, faUser, faStore, faEllipsisV, faUserCircle, faStar, faBoxOpen, faHeart, faGift, faEnvelope, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
-const NavbarOne = () => {
+const Navbar = () => {
     return (
         <div className='navbar-full-wrapper'>
             {/* Upper Navbar */}
             <div className='navbar-upper-wrapper'>
                 {/* Upper Left Navbar */}
                 <div className='navbar-upper-left-wrapper'>
-                    <div className='navbar-company-name-container'>
-                        <p className='navbar-company-name'>swiftcart</p>
+                   <div className='navbar-company-name-container'>
+                      <Link to='/' style={{textDecoration:'none', color:'inherit',textAlign:'center'}}><p className='navbar-company-name'>swiftcart</p></Link>
                     </div>
                     <div className='navbar-search-item-container'>
                         <div className='navbar-search-input-container'>
@@ -25,15 +26,15 @@ const NavbarOne = () => {
 
                     <div className='navbar-user-login-container'>
                         <FontAwesomeIcon className='navbar-user-icon' icon={faUser} />
-                        <p className='navbar-user-login-text'>Login</p>
+                       <Link to='/user-login' style={{textDecoration:'none',color:'inherit'}}><p className='navbar-user-login-text'>Login</p></Link>
                         <FontAwesomeIcon className="navbar-user-login-arrow" icon={faChevronDown}/>
                         <div className="navbar-user-login-dropdown">
                             <div className="navbar-user-login-dropdown-upper-container">
                                 <div className='navar-new-customer-container'>
-                                    <p className='navbar-dropdown-new-customer-text'>New Customer?</p>
+                                <Link to='/sign-up' style={{textDecoration:'none',color:'inherit'}}><p className='navbar-dropdown-new-customer-text'>New Customer?</p></Link>
                                 </div>
                                 <div className='navbar-dropdown-signup-container'>
-                                    <p className='navbar-dropdown-signup-text'>Sign Up</p>
+                                <Link to='/sign-up' style={{textDecoration:'none',color:'inherit'}}><p className='navbar-dropdown-signup-text'>Sign Up</p></Link>
                                 </div>
                             </div>
                             <div className="navbar-user-login-dropdown-lower-container">
@@ -57,7 +58,7 @@ const NavbarOne = () => {
 
                     <div className='navbar-seller-container'>
                         <FontAwesomeIcon className='navbar-seller-store-icon' icon={faStore} />
-                        <p className='navbar-seller-text'>Become a Seller</p>
+                       <Link to='/seller' style={{textDecoration:'none',color:'inherit'}}><p className='navbar-seller-text'>Become a Seller</p></Link>
                     </div>
 
                     <div className='navbar-three-dot-container'>
@@ -77,4 +78,4 @@ const NavbarOne = () => {
     );
 };
 
-export default NavbarOne;
+export default Navbar;

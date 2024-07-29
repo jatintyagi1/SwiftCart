@@ -106,11 +106,6 @@ const Footer = () => {
                 </div>
             </div>
 
-
-
-
-
-
             {/* Lower Footer */}
             <div className='footer-lower-wrapper'>
                 <div className='footer-item-container-wrapper'>
@@ -138,14 +133,8 @@ const Footer = () => {
                         <p>2020 - 2024 swiftcart.com</p>
                     </div>
                     <div className='footer-lower-right-container'>
-                        <p>Visa</p>
-                        <p>Mastercard</p>
-                        <p>Paypal</p>
-                        <p>Paytm</p>
-                        <p>PhonePay</p>
-                        <p>Google pay</p>
-                        <p>Rupay</p>
-                        <p>Debit Card</p>
+                        <img src='' alt='payment-icons and images'/>
+                       
                     </div>
                 </div>
             </div>
