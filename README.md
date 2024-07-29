@@ -1,6 +1,7 @@
 # SwiftCart
 
-swiftcart app
+SwifCart is an Online E-Commerce PlatForm Where People Can Buy and Sell Products.
+
 ## Available Scripts
 
 In the project directory, you can run:
