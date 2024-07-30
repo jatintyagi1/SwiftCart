@@ -1,6 +1,8 @@
 import Navbar from "../grocery/components/navbar/navbar";
 import Navcard from "../grocery/components/navCard/navCard";
 import Footer from './../../customer/components/coreComponents/footer/footer'
+
+
 const GroceryHome = () => {
     return(
         <div>
