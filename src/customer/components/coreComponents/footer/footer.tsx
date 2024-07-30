@@ -32,7 +32,7 @@ const Footer = () => {
                         <ul className='footer-group-company-list-item'>
                             <li>Gym Solution</li>
                             <li>Constructify</li>
-                            <li>Shopsy</li>
+                            <li>HealthCare</li>
                         </ul>
                     </div>
                 </div>
