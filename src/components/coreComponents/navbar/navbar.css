@@ -1,0 +1,329 @@
+/* full Navbar Wrapper */
+.navbar-full-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-upper-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.navbar-upper-left-wrapper {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar-company-name-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28%;
+    height: 75px;
+}
+
+.navbar-company-name {
+    font-size: 3em;
+    font-style: italic;
+    color: #0000ff;
+    cursor: pointer;
+}
+
+.navbar-search-item-container {
+    width: 72%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-search-input-container {
+    width: 90%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f5ff;
+    border-radius: 10px;
+}
+
+.navbar-search-icon {
+    width: 7%;
+    height: 60%;
+    cursor: pointer;
+}
+
+.navbar-search-input {
+    width: 90%;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #f0f5ff;
+}
+
+.navbar-search-input:focus {
+    border: none;
+    outline: none;
+}
+
+/* Right side Navbar  */
+.navbar-upper-right-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 40%;
+}
+
+.navbar-user-login-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 70%;
+    width: 20%;
+    cursor: pointer;
+    margin-left: -55px;
+    position: relative;
+}
+
+.navbar-user-icon,
+.navbar-cart-icon,
+.navbar-seller-store-icon,
+.navbar-three-dot {
+    padding: 5px;
+    height: 22px;
+}
+
+.navbar-user-login-text,
+.navbar-cart-text,
+.navbar-seller-text {
+    font-size: 20px;
+}
+
+.navbar-user-login-arrow {
+    transition: transform 0.3s;
+}
+
+.navbar-user-login-container:hover .navbar-user-login-arrow {
+    transform: rotate(180deg);
+}
+
+.navbar-user-login-container:hover {
+    background-color: #0000ff;
+    border-radius: 8px;
+    color: #ffffff;
+}
+
+.navbar-user-login-dropdown {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    border-radius: 8px;
+}
+
+.navbar-user-login-container:hover .navbar-user-login-dropdown {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.navbar-user-login-dropdown-upper-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.navar-new-customer-container {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.navbar-dropdown-signup-container {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+.navbar-dropdown-new-customer-text {
+    font-size: 18px;
+    color: #000000;
+    margin-left: 13px;
+}
+
+.navbar-dropdown-signup-text {
+    color: #0000ff;
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.navbar-user-login-dropdown-lower-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #000000;
+}
+
+.navbar-user-dropdown-list {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+}
+
+.navbar-login-dropdown-icon {
+    margin-right: 8px;
+}
+
+.navbar-user-dropdown-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+.navbar-user-dropdown-list li:hover {
+    background-color: #ddd;
+}
+
+.navbar-user-dropdown-list li:first-child {
+    margin-top: -5px;
+}
+
+
+/* Cart Container */
+
+.navbar-cart-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 70%;
+    width: 12%;
+    cursor: pointer;
+}
+
+/* Seller Container */
+
+.navbar-seller-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    gap: 10px;
+    height: 70%;
+}
+
+.navbar-three-dot-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    cursor: pointer;
+    margin-left: -25px;
+    height: 30%;
+    width: 30px;
+    position: relative;
+}
+
+/* 3 dot dropdown  */
+
+.navbar-three-dot-dropdown {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    border-radius: 8px;
+}
+
+.navbar-three-dot-container:hover .navbar-three-dot-dropdown {
+    display: block;
+}
+
+/* Adjust dropdown to open on the right if it goes out of screen */
+.navbar-three-dot-container:hover .navbar-three-dot-dropdown {
+    left: auto;
+    right: 0;
+    transform: translateX(0%);
+}
+
+.navbar-three-dot-dropdown-list {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+}
+
+.navbar-three-dot-dropdown-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.navbar-three-dot-dropdown-list li:hover {
+    background-color: #ddd;
+}
+
+
+
+
+/* Web Responsive Design  */
+
+
+
+/* Extra Small Devices (Phones) */
+@media (max-width: 480px) {
+    .navbar-full-wrapper {
+        width: 100%;
+      
+    }
+  }
+  
+  /* Small Devices (Portrait Tablets and Large Phones) */
+  @media (min-width: 481px) and (max-width: 767px) {
+    .navbar-full-wrapper {
+        width: 100%; 
+    }
+  }
+  
+  /* Medium Devices (Landscape Tablets) */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .navbar-full-wrapper {
+        width: 100%;
+    }
+  }
+  
+  /* Large Devices (Desktops) */
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .navbar-full-wrapper {
+        width: 100%;
+    }
+  }
+  
+ 
