@@ -3,11 +3,10 @@ import {
     createHashRouter,
 } from "react-router-dom";
 
-const Home = lazy(() => import('../customer/pages/home'));
-const CustomerSignup = lazy(() => import('../customer/components/coreComponents/signup/signup'));
-const UserLogin = lazy(() => import('../customer/components/coreComponents/signin/login'));
-const SellerHome = lazy(() => import('../seller/pages/home'));
-const Grocery = lazy(() => import('../customer/pages/groceryhome'))
+const Home = lazy(() => import('../pages/home'));
+const CustomerSignup = lazy(() => import('../components/coreComponents/signup/signup'));
+const UserLogin = lazy(() => import('../components/coreComponents/signin/login'));
+const Grocery = lazy(() => import('../pages/groceryHome'))
 
 
 export const router = createHashRouter([
@@ -22,10 +21,6 @@ export const router = createHashRouter([
     {
         path: "/user-login",
         element: <Suspense> <UserLogin/> </Suspense>
-    },
-    {
-        path:'/seller',
-        element: <Suspense><SellerHome/></Suspense>
     },
     {
         path:'/grocery',
