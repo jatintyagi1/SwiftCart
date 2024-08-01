@@ -2,7 +2,10 @@
 
 
 #images
+src/assets
 
+#API
+src/httpClient
 
 # dependencies
 /node_modules
