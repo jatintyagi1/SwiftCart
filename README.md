@@ -12,3 +12,7 @@ SwifCart is an Online E-Commerce PlatForm Where People Can Buy and Sell Products
 - Payment Integration
 - Admin Panel for Product Management
 
+
+![Logo]('./../src/assets//images/Seller_Footer_1.png)
+
+
