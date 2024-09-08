@@ -61,7 +61,8 @@ const Navbar = () => {
                             href="https://sellerswiftcartcom.vercel.app/" 
                             className='navbar-seller-text'
                             style={{
-                                textDecoration: 'none'
+                                textDecoration: 'none',
+                                color: 'inherit'
                             }}    
                         >
                             Become a Seller
