@@ -1,0 +1,137 @@
+.navcard-wrapper{
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin-top: 10px; 
+}
+
+.navcard-item-container-wrapper{
+    display: flex;
+    flex-direction: row;
+}
+
+.navcard-items-list{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 20px;
+    cursor: pointer;
+}
+
+
+.navcard-dropdown-menu-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.navcard-dropdown-icon{
+    margin-left: 8px;
+}
+
+
+
+
+.navcard-menu-item{
+  position: relative;
+  cursor: pointer;
+}
+
+.navcard-menu-text{
+    margin-right: 5px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.navcard-menu-text:hover{
+    color: #0000ff;
+}
+
+.navcard-dropdown-icon{
+    transition: transform 0.3s ease;
+}
+
+.navcard-menu-item:hover .navcard-dropdown-icon{
+    transform: rotate(180deg); /* Rotate icon on hover */
+    color: #0000ff;
+}
+
+.navcard-dropdown-content{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1); /* Shadow for dropdown */
+    z-index: 1;
+    display: none; /* Hide dropdown by default */
+    padding: 10px;
+    min-width: 200px; /* Minimum width for dropdown */
+}
+
+.navcard-menu-item:hover .navcard-dropdown-content{
+    display: block;
+}
+
+.navcard-dropdown-list{
+    list-style: none;
+    padding: 6px 7px;
+    margin: 0;
+}
+
+.navcard-dropdown-list li{
+    padding: 8px 0;
+    cursor: pointer;
+}
+
+.navcard-dropdown-list li:hover{
+    color: #0000ff;
+}
+
+
+
+
+
+
+/* Web Responsive Design */
+
+
+/* Extra Small Devices (Phones) */
+@media (max-width: 480px) {
+    .navcard-wrapper{
+        max-width: 100%;
+    }
+    .navcard-item-container-wrapper{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    .navcard-items-list{
+        width: 100%;
+    }
+  }
+  
+  /* Small Devices (Portrait Tablets and Large Phones) */
+  @media (min-width: 481px) and (max-width: 767px) {
+    .navcard-wrapper{
+        /* background-color: yellow; */
+        
+    }
+
+  }
+  
+  /* Medium Devices (Landscape Tablets) */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .navcard-wrapper{
+        /* background-color: yellow; */
+    }
+
+  }
+  
+  /* Large Devices (Desktops) */
+  @media (min-width: 992px) and (max-width: 1199px) {
+
+  }
+  
+ 

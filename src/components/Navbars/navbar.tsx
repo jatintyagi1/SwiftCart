@@ -57,7 +57,15 @@ const Navbar = () => {
 
                     <div className='navbar-seller-container'>
                         <FontAwesomeIcon className='navbar-seller-store-icon' icon={faStore} />
-                        <p className='navbar-seller-text'>Become a Seller</p>
+                        <a 
+                            href="https://sellerswiftcartcom.vercel.app/" 
+                            className='navbar-seller-text'
+                            style={{
+                                textDecoration: 'none'
+                            }}    
+                        >
+                            Become a Seller
+                        </a>
                     </div>
 
                     <div className='navbar-three-dot-container'>
