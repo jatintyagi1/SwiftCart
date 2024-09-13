@@ -6,8 +6,8 @@ import Navcard from './components/Navbars/navCard';
 function App() {
   return (
     <>
-    <Navbar />
-    <Navcard/>
+      <Navbar />
+      <Navcard />
     </>
   )
 }
