@@ -1,63 +1,242 @@
 .navcard-wrapper {
-    background-color: #ffffff;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.navcard-item-container-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.navcard-items-list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 20px;
+  cursor: pointer;
+}
+
+
+.navcard-dropdown-menu-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.navcard-dropdown-icon {
+  margin-left: 8px;
+}
+
+.navcard-menu-item {
+  position: relative;
+  cursor: pointer;
+}
+
+.navcard-menu-text {
+  margin-right: 5px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.navcard-menu-text:hover {
+  color: #0000ff;
+}
+
+.navcard-dropdown-icon {
+  transition: transform 0.3s ease;
+}
+
+.navcard-menu-item:hover .navcard-dropdown-icon {
+  transform: rotate(180deg);
+  color: #0000ff;
+}
+
+.navcard-dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  /* White background */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  /* Shadow for dropdown */
+  z-index: 1;
+  display: none;
+  /* Hide dropdown by default */
+  padding: 10px;
+  min-width: 200px;
+  /* Minimum width for dropdown */
+}
+
+.navcard-menu-item:hover .navcard-dropdown-content {
+  display: block;
+}
+
+.navcard-dropdown-list {
+  list-style: none;
+  padding: 6px 7px;
+  margin: 0;
+}
+
+.navcard-dropdown-list li {
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+.navcard-dropdown-list li:hover {
+  color: #0000ff;
+}
+
+/* Hamburger Icon for Mobile */
+.navcard-hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  align-items: start;
+}
+
+/* Sticky Navbar */
+.sticky-navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+/* Full-Screen Overlay for Mobile */
+.navcard-overlay {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(243, 235, 235, 0.9);
+  z-index: 1001;
+  transition: left 0.3s ease;
+}
+
+.navcard-overlay.open {
+  left: 0;
+}
+
+.navcard-overlay-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  list-style: none;
+}
+
+.navcard-overlay-menu li {
+  color: black;
+  font-size: 22px;
+  padding: 20px 0;
+  cursor: pointer;
+}
+
+.navcard-overlay-menu li:hover {
+  color: blue;
+}
+
+.navcard-close-overlay {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  color: black;
+}
+
+
+/*
+/////////////////////////////////////////////////////////////
+                        
+                    Web Responsive Design 
+
+/////////////////////////////////////////////////////////////
+
+*/
+
+
+/* Extra Small Devices (Phones) */
+@media (max-width: 500px) {
+
+  .navcard-wrapper {
     display: flex;
+    justify-content: start; 
     align-items: center;
-    justify-content: space-between;
-    padding: 10px;
+    height: 40px; 
   }
-  
-  .navcard-item-container-wrapper {
+
+  .navcard-hamburger {
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: center;
-  }
-  
-  .navcard-items-list {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    gap: 10px;
+    font-size: 30px; 
     cursor: pointer;
-    font-size: 19px;
+    margin-left: 10px;
   }
-  
-  .navcard-menu-item:hover .navcard-dropdown-icon {
-    transform: rotate(180deg);
-  }
-  
-  .navcard-menu-button {
+
+  .navcard-item-container-wrapper {
     display: none;
   }
-  
-  
-  
-  
-  /* Small Devices (Portrait Tablets and Large Phones) */
-  @media (max-width: 768px) {
-    .navcard-menu-button {
-      display: block;
-      /* Show hamburger menu on small screens */
-    }
-  
-    .navcard-item-container-wrapper {
-      display: none;
-      /* Hide the horizontal menu on small screens */
-    }
+}
+
+/* Small Devices (Portrait Tablets and Large Phones) */
+@media (min-width: 501px) and (max-width: 767px) {
+  .navcard-dropdown-icon{
+    display: none;
   }
-  
-  
-  /* Medium Devices (Landscape Tablets) */
-  @media (min-width: 768px) and (max-width: 991px) {
-    .navcard-item-container-wrapper {
-      display: block;
-    }
-  
-    .navcard-wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px;
-    }
-  
+
+
+}
+
+/* Medium Devices (Landscape Tablets) */
+@media (min-width: 768px) and (max-width: 990px) {
+
+  .navcard-wrapper,
+  .navcard-item-container-wrapper {
+    width: 100%;
   }
+
+  .navcard-items-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -15px;
+  }
+
+  .navcard-menu-text{
+    font-size: 15px;
+  }
+
+  .navcard-dropdown-icon{
+    display: none;
+  }
+
+}
+
+/* Large Devices (Desktops) */
+@media (min-width: 991px) and (max-width: 1199px) {
+
+  .navcard-wrapper,
+  .navcard-item-container-wrapper {
+    width: 100%;
+  }
+
+  .navcard-items-list {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navcard-menu-text{
+    font-size: 17px;
+  }
+
+  .navcard-dropdown-icon{
+    display: none;
+  }
+}

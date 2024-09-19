@@ -1,155 +1,143 @@
 import { useState } from 'react';
-import { Menu, Button, Drawer } from 'antd';
-import { MenuOutlined } from '@ant-design/icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import './navcard.css'
 import '../../styles/navCard.css';
+import { faChevronDown, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 const Navcard = () => {
-  const [drawerVisible, setDrawerVisible] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const showDrawer = () => {
-    setDrawerVisible(true);
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
-
-  const closeDrawer = () => {
-    setDrawerVisible(false);
-  };
-
-  const menuItems = [
-    {
-      label: 'Grocery',
-      key: 'grocery',
-    },
-    {
-      label: 'Mobile',
-      key: 'mobile',
-    },
-    {
-      label: (
-        <span>
-          Fashion
-        </span>
-      ),
-      key: 'fashion',
-      children: [
-        { label: "Men's Top Wear", key: 'men-top-wear' },
-        { label: "Men's Bottom Wear", key: 'men-bottom-wear' },
-        { label: 'Women Ethnic', key: 'women-ethnic' },
-        { label: 'Men Footwear', key: 'footwear' },
-        { label: 'Women Footwear', key: 'women-footwear' },
-        { label: 'Watch and Accessories', key: 'watch' },
-        { label: 'Women Western', key: 'women-western' },
-        { label: 'Bags, Suitcase & Luggage', key: 'luggage' },
-        { label: 'Kids', key: 'kids' },
-        { label: 'Essential', key: 'essential' },
-        { label: 'Winter', key: 'winter' },
-      ],
-    },
-    {
-      label: (
-        <span>
-          Electronics
-        </span>
-      ),
-      key: 'electronics',
-      children: [
-        { label: 'Audio', key: 'audio' },
-        { label: 'Electronics GST Store', key: 'gst-store' },
-        { label: 'Camera & Accessories', key: 'camera' },
-        { label: 'Computer Peripherals', key: 'computer' },
-        { label: 'Gaming', key: 'gaming' },
-        { label: 'Health & Personal Care', key: 'health' },
-        { label: 'Laptop Accessories', key: 'laptop' },
-        { label: 'Laptop & Desktop', key: 'desktop' },
-        { label: 'Mobile Accessory', key: 'mobile-accessory' },
-        { label: 'PowerBanks', key: 'powerbanks' },
-        { label: 'Smart Home Automation', key: 'smart-home' },
-        { label: 'Smart Wearable', key: 'wearable' },
-      ],
-    },
-    {
-      label: (
-        <span>
-          Home & Furniture
-        </span>
-      ),
-      key: 'home-furniture',
-      children: [
-        { label: 'Home Furnishing', key: 'home-furnishing' },
-        { label: 'Furniture', key: 'furniture' },
-        { label: 'Living Room Furniture', key: 'room-furniture' },
-        { label: 'Kitchen & Dining', key: 'kitchen' },
-        { label: 'Bedroom Furniture', key: 'bedroom' },
-        { label: 'Space Saving Furniture', key: 'space-furniture' },
-        { label: 'Home Decor', key: 'home-decor' },
-        { label: 'Tools & Utility', key: 'tools' },
-        { label: 'Work Space Furniture', key: 'work-space' },
-        { label: 'Kids Furniture', key: 'kids-furniture' },
-        { label: 'Lightings & Electricals', key: 'lighting' },
-        { label: 'Cleaning & Bath', key: 'cleaning-bath' },
-      ],
-    },
-    {
-      label: 'Appliances',
-      key: 'appliances',
-    },
-    {
-      label: 'Travel',
-      key: 'travel',
-    },
-    {
-      label: (
-        <span>
-          Toy & More
-        </span>
-      ),
-      key: 'toy-more',
-      children: [
-        { label: 'Beauty & Personal Care', key: 'beauty-care' },
-        { label: 'Men Grooming', key: 'men-grooming' },
-        { label: 'Food & Drink', key: 'food-drink' },
-        { label: 'Nutrition & Health Care', key: 'nutrition-health' },
-        { label: 'Baby care', key: 'baby-care' },
-        { label: 'Toys & School Supplies', key: 'toys-school' },
-        { label: 'Sports & Fitness', key: 'sports-fitness' },
-        { label: 'Books', key: 'books' },
-        { label: 'Music', key: 'music' },
-        { label: 'Stationery & Office Supplies', key: 'stationery-office' },
-      ],
-    },
-    {
-      label: (
-        <span>
-          Two Wheelers
-        </span>
-      ),
-      key: 'two-wheeler',
-      children: [
-        { label: 'Petrol Vehicle', key: 'petrol-vehicle' },
-        { label: 'Electric Vehicle', key: 'electric-vehicle' },
-      ],
-    },
-  ];
-
   return (
     <div className="navcard-wrapper">
-      {/* Small Screen */}
-      <Button className="navcard-menu-button" type="primary" onClick={showDrawer}>
-        <MenuOutlined />
-      </Button>
-      <Drawer
-        title="Menu"
-        placement="left"
-        onClose={closeDrawer}
-        visible={drawerVisible}
-      >
-        <Menu mode="vertical" items={menuItems} />
-      </Drawer>
-      {/* Large Screen */}
+      <div className="navcard-hamburger" onClick={toggleMobileMenu}>
+        <FontAwesomeIcon icon={faBars} />
+      </div>
+
+      <div className={`navcard-overlay ${isMobileMenuOpen ? 'open' : ''}`}>
+        <FontAwesomeIcon icon={faTimes} className="navcard-close-overlay" onClick={toggleMobileMenu} />
+        <ul className="navcard-overlay-menu">
+          <li>Grocery</li>
+          <li>Mobile</li>
+          <li>Fashion</li>
+          <li>Electronics</li>
+          <li>Appliances</li>
+          <li>Travel</li>
+        </ul>
+      </div>
+
+
       <div className="navcard-item-container-wrapper">
-        {/* Horizontal Menu for larger screens */}
-        <Menu mode="horizontal" items={menuItems} className="navcard-items-list" />
+        <ul className="navcard-items-list">
+          <li className='navcard-menu-text'>Grocery</li>
+          <li className='navcard-menu-text'>Mobile</li>
+
+          <li className='navcard-menu-item'>
+            <span className='navcard-menu-text'>Fashion</span>
+            <FontAwesomeIcon className='navcard-dropdown-icon' icon={faChevronDown} />
+            <div className='navcard-dropdown-content'>
+              <ul className='navcard-dropdown-list'>
+                <li>Men's Top Wear</li>
+                <li>Men's Bottom Wear</li>
+                <li>Women Ethnic</li>
+                <li>Men Footwear</li>
+                <li>Women Footwear</li>
+                <li>Watch and Accessories</li>
+                <li>Women Western</li>
+                <li>Bags, Suitcase & Luggage</li>
+                <li>Kids</li>
+                <li>Essentials</li>
+                <li>Winter</li>
+              </ul>
+            </div>
+          </li>
+
+          <li className='navcard-menu-item'>
+            <span className='navcard-menu-text'>Electronics</span>
+            <FontAwesomeIcon className='navcard-dropdown-icon' icon={faChevronDown} />
+            <div className='navcard-dropdown-content'>
+              <ul className='navcard-dropdown-list'>
+                <li>Audio</li>
+                <li>Electronics GST Store</li>
+                <li>Camera & Accessories</li>
+                <li>Computer Peripherals</li>
+                <li>Gaming</li>
+                <li>Health & Personal Care</li>
+                <li>Laptop Accessories</li>
+                <li>Laptop and Desktop</li>
+                <li>Mobile Accessory</li>
+                <li>Powerbank</li>
+                <li>Smart Home automation</li>
+                <li>Smart Wearable</li>
+              </ul>
+            </div>
+          </li>
+
+          {/* Home & Furniture */}
+          <li className='navcard-menu-item'>
+            <span className='navcard-menu-text'>Furniture</span>
+            <FontAwesomeIcon className='navcard-dropdown-icon' icon={faChevronDown} />
+            <div className='navcard-dropdown-content'>
+              <ul className='navcard-dropdown-list'>
+                <li>Home Furnishing</li>
+                <li>Furniture</li>
+                <li>Living Room Furniture</li>
+                <li>Kitchen & Dining</li>
+                <li>Bedroom Furniture</li>
+                <li>Space Saving Furniture</li>
+                <li>Home Decor</li>
+                <li>Tools & Utility</li>
+                <li>Work Space Furniture</li>
+                <li>Kids Furniture</li>
+                <li>Lightings & Electrical</li>
+                <li>Cleaning & Bath</li>
+              </ul>
+            </div>
+          </li>
+
+
+          <li className='navcard-menu-text'>Appliances</li>
+          <li className='navcard-menu-text'>Travel</li>
+
+          {/* Beauty */}
+          <li className='navcard-menu-item'>
+            <span className='navcard-menu-text'>Toy & More</span>
+            <FontAwesomeIcon className='navcard-dropdown-icon' icon={faChevronDown} />
+            <div className='navcard-dropdown-content'>
+              <ul className='navcard-dropdown-list'>
+                <li>Beauty & Personal care</li>
+                <li>Men's Grooming</li>
+                <li>Food & Drinks</li>
+                <li>Nutrition & Health Care</li>
+                <li>baby Care</li>
+                <li>Toys & School Supplies</li>
+                <li>Sports & Fitness</li>
+                <li>Books</li>
+                <li>Musics</li>
+                <li>Stationary & Office Supplies</li>
+                <li>Auto Accessories</li>
+                <li>Safety & Hygiene Essential</li>
+              </ul>
+            </div>
+          </li>
+
+
+          {/* Vehicle */}
+          <li className='navcard-menu-item'>
+            <span className='navcard-menu-text'>Two Wheelers</span>
+            <FontAwesomeIcon className='navcard-dropdown-icon' icon={faChevronDown} />
+            <div className='navcard-dropdown-content'>
+              <ul className='navcard-dropdown-list'>
+                <li>Petrol Vehicle</li>
+                <li>Electric Vehicle</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
-  );
-};
+  )
+}
 export default Navcard;
