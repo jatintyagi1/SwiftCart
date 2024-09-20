@@ -293,22 +293,61 @@
 
 
 
-/* Web Responsive Design  */
+/*
+/////////////////////////////////////////////////////////////
+                        
+                    Web Responsive Design 
+
+/////////////////////////////////////////////////////////////
+
+*/
 
 
 
 /* Extra Small Devices (Phones) */
 @media (max-width: 480px) {
+    .navbar-company-name-container,
+    .navbar-cart-container,
+    .navbar-seller-container,
+    .navbar-three-dot-container{
+        display: none;
+    }
+    
     .navbar-full-wrapper {
         width: 100%;
-      
     }
+
+    .navbar-upper-left-wrapper{
+        width: 90%;
+    }
+
+    .navbar-search-item-container{
+        width: 100%;
+    }
+    .navbar-search-input-container{
+        width: 90%;
+    }
+
+
+    .navbar-user-login-container{
+        width: 60%;
+    }
+
+    .navbar-user-login-text{
+        margin-right: 8px;
+    }
+
+
   }
   
   /* Small Devices (Portrait Tablets and Large Phones) */
   @media (min-width: 481px) and (max-width: 767px) {
     .navbar-full-wrapper {
         width: 100%; 
+    }
+
+    .navbar-three-dot-container{
+        display: none;    
     }
   }
   
@@ -317,13 +356,64 @@
     .navbar-full-wrapper {
         width: 100%;
     }
+
+    .navbar-upper-left-wrapper{
+        width: 70%;
+    }
+
+    .navbar-upper-right-wrapper{
+        width: 30%;
+    }
+
+    .navbar-three-dot-container{
+        margin-right: -55px;
+    }
+
+    .navbar-cart-container{
+        margin-right: -12px;
+        
+    }
+
+    .navbar-user-login-container{
+        margin-left: -80px;
+    }
+
+
+
+    .navbar-seller-container{
+        display: none;
+    }
+
+
   }
+
+
+
+
   
   /* Large Devices (Desktops) */
   @media (min-width: 992px) and (max-width: 1199px) {
     .navbar-full-wrapper {
         width: 100%;
     }
+    .navbar-company-name-container{
+        font-size: 14px;
+        margin-right: -21px;
+    }
+
+    .navbar-cart-container{
+        margin-right: -12px;
+        margin-left: 1px;
+    }
+
+    .navbar-seller-container{
+        margin-right: -12px;
+    }
+
+    .navbar-three-dot-container{
+        margin-right: -15px;
+    }
+
   }
   
  

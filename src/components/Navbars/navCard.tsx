@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import './navcard.css'
 import '../../styles/navCard.css';
 import { faChevronDown, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 const Navcard = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -19,20 +20,26 @@ const Navcard = () => {
       <div className={`navcard-overlay ${isMobileMenuOpen ? 'open' : ''}`}>
         <FontAwesomeIcon icon={faTimes} className="navcard-close-overlay" onClick={toggleMobileMenu} />
         <ul className="navcard-overlay-menu">
-          <li>Grocery</li>
+          <Link to='/grocery'><li>Grocery</li></Link>
           <li>Mobile</li>
           <li>Fashion</li>
           <li>Electronics</li>
+          <li>Furniture</li>
           <li>Appliances</li>
+          <li>Toy & More</li>
           <li>Travel</li>
+          <li>Two Wheelers</li>
         </ul>
       </div>
 
-
       <div className="navcard-item-container-wrapper">
         <ul className="navcard-items-list">
-          <li className='navcard-menu-text'>Grocery</li>
-          <li className='navcard-menu-text'>Mobile</li>
+          <Link to='/grocery' style={{ textDecoration: 'none', color: 'inherit' }}>
+            <li className='navcard-menu-text'>Grocery</li>
+          </Link>
+          <Link to='/mobile' style={{ textDecoration: 'none', color: 'inherit' }}>
+            <li className='navcard-menu-text'>Mobile</li>
+          </Link>
 
           <li className='navcard-menu-item'>
             <span className='navcard-menu-text'>Fashion</span>

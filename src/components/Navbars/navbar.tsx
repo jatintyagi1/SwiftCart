@@ -47,7 +47,6 @@ const Navbar = () => {
                                 </ul>
                             </div>
                         </div>
-
                     </div>
 
                     <div className='navbar-cart-container'>

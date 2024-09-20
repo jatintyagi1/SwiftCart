@@ -1,9 +1,9 @@
 import React from 'react';
 import { Button, Result } from 'antd';
-// import { useNavigate } from 'react-router-dom'; // Assuming you're using react-router-dom
+ import { useNavigate } from 'react-router-dom'; // Assuming you're using react-router-dom
 
 const NotFoundPage = () => {
-    //const navigate = useNavigate();
+    const navigate = useNavigate();
 
     return (
         <Result
@@ -12,7 +12,7 @@ const NotFoundPage = () => {
             subTitle="Sorry, the page you visited does not exist."
             extra={
                 <Button type="primary"
-                    //onClick={() => navigate('/')}
+                    onClick={() => navigate('/')}
                 >
                     Back to Home
                 </Button>
