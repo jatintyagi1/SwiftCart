@@ -31,9 +31,36 @@ const Footer = () => {
                         <div className='footer-group-company-container'>
                             <p className='footer-upper-group-company-text'>GROUP COMPANIES</p>
                             <ul className='footer-group-company-list-item'>
-                                <li>Gym Solution</li>
-                                <li>Constructify</li>
-                                <li>HealthCare</li>
+                                <li>
+                                    <a href="https://gym-solution.vercel.app/"
+                                        style={{
+                                            textDecoration: 'none',
+                                            color: 'inherit',
+                                            fontSize: '15px'
+                                        }}>
+                                        Gym Solution
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href='https://accufirm.vercel.app/'
+                                        style={{
+                                            textDecoration: 'none',
+                                            color: 'inherit',
+                                            fontSize: '15px'
+                                        }}>
+                                        AccuFirm
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href='https://jatintyagi1.github.io/HealthCare'
+                                        style={{
+                                            textDecoration: 'none',
+                                            color: 'inherit',
+                                            fontSize: '15px'
+                                        }}>
+                                        HealthCare
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </div>
