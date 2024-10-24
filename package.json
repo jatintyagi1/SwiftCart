@@ -14,6 +14,7 @@
     "@types/node": "^16.18.108",
     "@types/react-dom": "^18.3.0",
     "antd": "^5.20.6",
+    "frontend": "file:",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.1",
